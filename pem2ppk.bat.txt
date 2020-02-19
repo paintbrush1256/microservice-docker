@@ -1,0 +1,7 @@
+rem This script converts OpenSSH format private key(PEM) to Putty format private key(PPK)
+rem input to this script is the PEM private key file path
+rem This requires WinSCP to be installed already
+rem This is to be used to convert vagrant generated Private key to putty format private key
+rem ie.. the private key is at ".vagrant\machines\default\virtualbox"
+
+D:\Programs\WinSCP\winscp.com /keygen %1 /output=%1.ppk
