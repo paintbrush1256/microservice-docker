@@ -14,6 +14,7 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo apt-get install openjdk-8-jdk-headless -y
 sudo apt-get install maven -y
 
+#================== install docker end ===========================
 
 
 sudo service docker stop
@@ -37,6 +38,12 @@ or use docker image import ?
 
 vagrant@ubuntu-xenial:~$ sudo docker save tomcat:latest | gzip -c > shibu_tomcat_export.tgz
 
-=====================================
+#----------------------------------------------------------------------------------
+backup image to tar
+sudo docker save openjdk:8              -o openjdk.8.image.tar
+sudo docker save lucascoelhocs/db-derby -o db-derby.8.image.tar
+sudo docker save tomcat                 -o tomcat.8.5.51.image.tar
+
+===================================================================================
 
 sudo docker run -d -p 1527:1527 -v /dbs:/dbs lucascoelhocs/db-derby
