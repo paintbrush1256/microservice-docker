@@ -1,6 +1,21 @@
 sudo apt-get update
 sudo apt-get install docker.io -y
 
+#================== install docker start =========================
+sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt-get update
+sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+#================== install docker end ===========================
+
+sudo apt-get install openjdk-8-jdk-headless -y
+sudo apt-get install maven -y
+
+
+
 sudo service docker stop
 nohup sudo dockerd --max-concurrent-downloads 1 &
 sudo docker run tomcat

@@ -1,0 +1,1 @@
+sudo docker run -d -p 1527:1527 lucascoelhocs/db-derby
