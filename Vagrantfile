@@ -12,8 +12,19 @@ Vagrant.configure("2") do |config|
 
 	config.vm.network "forwarded_port", guest: 8080, host: 8080
 	config.vm.network "forwarded_port", guest: 9090, host: 9090
+	#------------------------------------------------------------
+	#Route Server
 	config.vm.network "forwarded_port", guest: 8101, host: 8101
+	#------------------------------------------------------------
+	#8761 = Eureka Server
+	config.vm.network "forwarded_port", guest: 8761, host: 8761
+	#------------------------------------------------------------
+    #derby	
 	config.vm.network "forwarded_port", guest: 1527, host: 1527
+	#------------------------------------------------------------
 
 	config.vm.synced_folder ".", "/vagrant"
+    config.vm.provider "virtualbox" do |v|
+        v.memory = 4096
+    end	
 end
