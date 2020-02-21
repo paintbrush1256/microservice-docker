@@ -1,0 +1,23 @@
+version: '3'
+services:
+    derby:
+        image: lucascoelhocs/db-derby
+        volumes: 
+            - /dbs:/dbs
+        ports:
+            - 1527:1527
+    eureka:
+        image: metro-eureka-server
+        ports:
+            - 8761:8761
+    route:
+        image: metro-route-service
+        environment:
+            - EUREKA_SERVER=eureka
+            - EUREKA_PORT=8761
+            - DERBY_DB_SERVER=derby
+            - DERBY_DB_PORT=1527
+            - DERBY_DB_USERNAME=shibu
+            - DERBY_DB_PASSWORD=shibu
+        ports:
+            - "8101-8110:8101"

@@ -9,6 +9,9 @@ DROP SEQUENCE hibernate_sequence restrict;
 --DROP PUBLIC SYNONYM hibernate_sequence;
 
 drop schema route restrict;
+
+
+
 create schema route;
 
 
