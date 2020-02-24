@@ -1,5 +1,11 @@
 sudo apt-get update
+
+#================== install docker start =========================
+#is this the preferred way? please check before proceeding
+#---------------------------------------------------------
 sudo apt-get install docker.io -y
+#================== install docker start =========================
+
 
 #================== install docker start =========================
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -11,10 +17,19 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 #================== install docker end ===========================
 
+
+#================== install docker-compose start =================
+sudo apt-get install jq -y
+VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | jq .name -r)
+sudo curl -L https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod 755 /usr/local/bin/docker-compose
+#================== install docker-compose end ===================
+
+
+#================== install java start ===========================
 sudo apt-get install openjdk-8-jdk-headless -y
 sudo apt-get install maven -y
-
-#================== install docker end ===========================
+#================== install java end =============================
 
 
 sudo service docker stop
@@ -23,20 +38,6 @@ sudo docker run tomcat
 
 sudo docker run -p 9090:8080 tomcat
 
-
-===================
-docker export and import an image
----------------------------------
-Simply use the docker save command. 
-$ docker save myusername/myproject:latest | gzip -c > myproject_img_bak20141103.tgz
-
-You will later be able to restore it with the docker load command. 
-$ gunzip -c myproject_img_bak20141103.tgz | docker load
-
-or use docker image import ?
-
-
-vagrant@ubuntu-xenial:~$ sudo docker save tomcat:latest | gzip -c > shibu_tomcat_export.tgz
 
 #----------------------------------------------------------------------------------
 backup image to tar
