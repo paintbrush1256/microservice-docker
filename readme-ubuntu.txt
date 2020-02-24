@@ -31,20 +31,9 @@ sudo apt-get install openjdk-8-jdk-headless -y
 sudo apt-get install maven -y
 #================== install java end =============================
 
+#================== Use docker without sudo ======================
+sudo groupadd docker
+sudo gpasswd -a $USER docker
 
-sudo service docker stop
-nohup sudo dockerd --max-concurrent-downloads 1 &
-sudo docker run tomcat
-
-sudo docker run -p 9090:8080 tomcat
-
-
-#----------------------------------------------------------------------------------
-backup image to tar
-sudo docker save openjdk:8              -o openjdk.8.image.tar
-sudo docker save lucascoelhocs/db-derby -o db-derby.8.image.tar
-sudo docker save tomcat                 -o tomcat.8.5.51.image.tar
-
-===================================================================================
-
-sudo docker run -d -p 1527:1527 -v /dbs:/dbs lucascoelhocs/db-derby
+#log out/in to activate the changes to groups.
+#=================================================================
