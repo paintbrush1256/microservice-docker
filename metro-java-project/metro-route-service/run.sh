@@ -3,5 +3,5 @@ echo Derby Server IP address = $derby_server_ip
 export eureka_server_ip=`sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(sudo docker ps | grep eureka_shibu | cut -d ' ' -f 1)`
 echo Eureka Server IP address = $eureka_server_ip
 
-sudo docker run -d -e EUREKA_SERVER=$eureka_server_ip -e EUREKA_PORT=8761 -e DERBY_DB_SERVER=$derby_server_ip -e DERBY_DB_PORT=1527 -e DERBY_DB_USERNAME=shibu -e DERBY_DB_PASSWORD=shibu -p 8101:8101 metro-route-service
+sudo docker run -d -e EUREKA_SERVER=$eureka_server_ip -e EUREKA_PORT=8761 -e DERBY_DB_SERVER=$derby_server_ip -e DERBY_DB_PORT=1527 -e DERBY_DB_USERNAME=shibu -e DERBY_DB_PASSWORD=shibu  -p 8101:8101 --name route_shibu metro-route-service
 

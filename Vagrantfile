@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
 	config.vm.box = "ubuntu/xenial64"
-
+    config.vm.box_check_update = false
+	
 	config.vm.network "forwarded_port", guest: 2000, host: 2000
 	config.vm.network "forwarded_port", guest: 3000, host: 3000
 	config.vm.network "forwarded_port", guest: 4000, host: 4000
@@ -21,6 +22,9 @@ Vagrant.configure("2") do |config|
 	#------------------------------------------------------------
     #derby	
 	config.vm.network "forwarded_port", guest: 1527, host: 1527
+	#------------------------------------------------------------
+    #kubernetes admin	
+	config.vm.network "forwarded_port", guest: 16443, host: 16443
 	#------------------------------------------------------------
 
 	config.vm.synced_folder ".", "/vagrant"
