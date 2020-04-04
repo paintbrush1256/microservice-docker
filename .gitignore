@@ -1,3 +1,7 @@
 .vagrant
 ubuntu-xenial-16.04-cloudimg-console.log
 target
+db-derby-10.14.2.0-bin
+.classpath
+.project
+.settings
