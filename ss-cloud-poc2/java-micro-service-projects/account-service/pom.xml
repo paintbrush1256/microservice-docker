@@ -149,7 +149,7 @@
             </execution>
           </executions>
           <configuration>
-            <repository>localhost:5000/spotify/foobar</repository>
+            <repository>localhost:5000/account-service</repository>
             <tag>${project.version}</tag>
             <buildArgs>
               <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
