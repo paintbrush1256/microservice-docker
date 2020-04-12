@@ -1,0 +1,9 @@
+https://stackoverflow.com/questions/52322707/aws-codepipeline-and-deployingto-eks
+https://aws.amazon.com/blogs/devops/continuous-deployment-to-kubernetes-using-aws-codepipeline-aws-codecommit-aws-codebuild-amazon-ecr-and-aws-lambda/
+
+https://linkerd.io/2017/05/24/a-service-mesh-for-kubernetes-part-x-the-service-mesh-api/
+
+https://blog.exxactcorp.com/building-a-kubernetes-cluster-using-vagrant/
+https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727
+https://medium.com/google-cloud/understanding-kubernetes-networking-services-f0cb48e4cc82
+https://medium.com/google-cloud/understanding-kubernetes-networking-ingress-1bc341c84078

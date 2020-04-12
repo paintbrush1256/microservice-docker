@@ -32,8 +32,10 @@ Vagrant.configure("2") do |config|
 	config.vm.network "forwarded_port", guest: 16443, host: 16443
 	#------------------------------------------------------------
 
-	config.vm.synced_folder ".", "/vagrant"
-	config.vm.synced_folder "D:/devspace/repository/", "/home/vagrant/.m2/repository"
+	config.vm.synced_folder "."                            , "/vagrant"
+	#config.vm.synced_folder "D:/Projects/aws-sscloudpoc"   , "/aws-sscloudpoc"
+	config.vm.synced_folder "D:/Projects/sscloudpoc"       , "/sscloudpoc"
+	config.vm.synced_folder "D:/devspace/repository/"      , "/home/vagrant/.m2/repository"
     
     config.vm.provider "virtualbox" do |v|
         v.memory = 4096
