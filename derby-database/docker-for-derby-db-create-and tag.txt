@@ -1,0 +1,5 @@
+sudo docker tag        lucascoelhocs/db-derby:latest local:db-derby-1.0
+sudo docker tag        lucascoelhocs/db-derby:latest localhost:5000/local:db-derby-1.0
+sudo docker tag        lucascoelhocs/db-derby:latest 732631625641.dkr.ecr.us-east-2.amazonaws.com/ss-cloud-poc-container-repo:db-derby-1.0
+
+sudo docker push       localhost:5000/local:db-derby-1.0

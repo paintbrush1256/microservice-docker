@@ -18,8 +18,9 @@ Vagrant.configure("2") do |config|
 	config.vm.network "forwarded_port", guest: 8080, host: 8080
 	config.vm.network "forwarded_port", guest: 9090, host: 9090
 	#------------------------------------------------------------
-	#Route Server
+	#Account and Customer Server
 	config.vm.network "forwarded_port", guest: 8101, host: 8101
+	config.vm.network "forwarded_port", guest: 8201, host: 8201
 	#------------------------------------------------------------
 	#8761 = Eureka Server
 	config.vm.network "forwarded_port", guest: 8761, host: 8761

@@ -1,0 +1,5 @@
+#to connet to derby-database, you need the derby client...
+sudo apt install derby-tools -y
+Then run the program 'ij'
+
+#Then create tables and insert sample data as per the db scripts in git repo
