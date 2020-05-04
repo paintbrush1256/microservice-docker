@@ -48,3 +48,14 @@ https://docs.aws.amazon.com/cli/latest/reference/codepipeline/index.html
 https://docs.aws.amazon.com/cli/latest/reference/lambda/index.html
 https://docs.aws.amazon.com/cli/latest/reference/cloudwatch/index.html
 https://docs.aws.amazon.com/cli/latest/reference/logs/index.html
+
+
+
+https://stackoverflow.com/questions/54953190/amazon-eks-generate-update-kubeconfig-via-python-script
+https://medium.com/@alejandro.millan.frias/managing-kubernetes-from-aws-lambda-7922c3546249
+https://github.com/weibeld/lambda-eks-example
+https://medium.com/@raj10x/configure-local-kubectl-to-access-remote-kubernetes-cluster-ee78feff2d6d
+https://www.edureka.co/community/14371/configure-kubectl-command-access-remote-kubernetes-cluster
+https://stackoverflow.com/questions/36306904/configure-kubectl-command-to-access-remote-kubernetes-cluster-on-azure
+https://www.nickaws.net/aws/2018/09/03/Interacting-with-EKS-via-Lambda.html
+https://linuxacademy.com/hands-on-lab/eb8b3c36-4111-4cfd-968e-d3ad70d05fba/
