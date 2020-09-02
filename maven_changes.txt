@@ -1,9 +1,0 @@
-sudo vi /etc/maven/settings.xml
-Modify below line....
-  <localRepository>/devspace/repository/</localRepository>
-
-  
-sudo mkdir -p /devspace/
-sudo ln -s /home/vagrant/.m2/repository /devspace/
-
-If required, make changes for folder share in vagrant....
